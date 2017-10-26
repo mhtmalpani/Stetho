@@ -1,24 +1,26 @@
 # Stetho
 
-### What is Stetho ?
+## What is Stetho ?
 Stetho: A debugging bridge for Android applications. It is an Open Source debug library developed by the Facebook team. When enabled developers gain access to the Chrome Developers Tools, thus it is possible to have a rich, interactive debugging experience.
 
-### How to access ?
+## How to access ?
 + Open Google Chrome
-+ Type: [**chrome://inspect**](chrome://inspect)
++ Type: **[chrome://inspect](chrome://inspect)**
 + Launch the app on the emulator
 + The option for inspecting will appear in Google Chrome page
 
 
+--
 
-### How to create ?
-#### Required items:
+
+## How to create ?
+### Required items:
 1. Add Gradle Dependencies
 2. Create App (Application) and initialise Stetho
 3. Create a Retrofit Client and add Stetho as interceptor
 4. Create any place for Network Calls
 
-#### How to do them ?
+### How to code ?
 
 build.gradle (App level)
 ```java
@@ -37,6 +39,7 @@ dependencies {
 }
 ```
 
+--
 
 App.java (Application file)
 ```java
@@ -57,6 +60,7 @@ private void initStetho() {
 }
 ```
 
+--
 
 RetrofitClient.java
 ```java
@@ -83,6 +87,8 @@ private static OkHttpClient getOkHttpWithStetho() {
 }
 ```
 
+--
+
 MainActivity.java
 ```java
 networkManager.getApi().yourNetworkCall().enqueue(new Callback<Object>(){
@@ -93,12 +99,12 @@ networkManager.getApi().yourNetworkCall().enqueue(new Callback<Object>(){
 ```
 
 
-### Note:
+## Note:
 In Application file: 
 1. Add INTERNET permission
 2. Add app name (App.java)
 
 
-### Help Used
+## Help Used
 Dummy REST API Json fetcher:
 [https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)
