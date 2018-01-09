@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        networkCall = (Button) findViewById(R.id.networkCall);
-        responseText = (TextView) findViewById(R.id.response);
+        networkCall = findViewById(R.id.networkCall);
+        responseText = findViewById(R.id.response);
 
         networkManager = new NetworkManager();
 
